@@ -1,0 +1,182 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+    id 'androidx.navigation.safeargs'
+}
+
+android {
+
+    // if it doesnt work change it to 27
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.fyp.smhs"
+        minSdkVersion 16
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildFeatures {
+        dataBinding true
+        viewBinding true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    packagingOptions {
+        // Exclude file to avoid
+        // Error: Duplicate files during packaging of APK
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+        exclude 'META-INF/*.kotlin_module'
+    }
+}
+
+dependencies {
+
+    implementation platform('com.google.firebase:firebase-bom:26.7.0')
+   //
+
+    implementation 'androidx.navigation:navigation-common:2.3.2'
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+
+  //  implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'com.google.firebase:firebase-analytics'
+
+    // firebase auth
+
+    // Import the BoM for the Firebase platform
+    implementation platform('com.google.firebase:firebase-bom:26.7.0')
+
+
+
+    // Declare the dependency for the Firebase Authentication library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-auth'
+    
+    // firebase storage
+    implementation 'com.google.firebase:firebase-storage'
+
+    // firebase Database
+  //  implementation 'com.google.firebase:firebase-database'
+    implementation 'com.google.firebase:firebase-database:19.2.1'
+
+    // “Cannot fit requested classes in a single dex file” fix
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+
+    // firebase cloud Database
+    implementation 'com.google.firebase:firebase-firestore'
+
+    //Firebase ui
+    implementation 'com.firebaseui:firebase-ui-database:7.1.1'
+
+    // Image Cropper Library
+    api 'com.theartofdev.edmodo:android-image-cropper:2.8.0'
+
+    // Shape library to draw curves
+    implementation 'com.github.florent37:shapeofview:1.4.7'
+
+    // Retrofit Library
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.7.1'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.9.0'
+
+
+    // Glide library
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.vectordrawable:vectordrawable:1.1.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.android.gms:play-services-location:18.0.0'
+    implementation 'androidx.coordinatorlayout:coordinatorlayout:1.1.0'
+    implementation 'com.android.support:design:28.0.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+
+    // Dependency for circular ImageView
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+   implementation 'androidx.navigation:navigation-fragment:2.3.1'
+
+
+    // AppIntro dependency
+    implementation 'com.github.AppIntro:AppIntro:5.1.0'
+
+    // Android Navigation component
+    def nav_version = "2.1.0"
+
+    // Java language implementation
+    implementation "androidx.navigation:navigation-fragment:$nav_version"
+    implementation "androidx.navigation:navigation-ui:$nav_version"
+
+    // Preferences
+    implementation "androidx.preference:preference:1.1.0"
+
+    // Android Room
+    def room_version = "2.2.0"
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+
+    // MPAndroidChart
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
+    implementation 'com.karumi:dexter:5.0.0'
+    implementation 'com.google.android.gms:play-services-maps:16.1.0'
+    implementation 'com.github.mancj:MaterialSearchBar:0.8.1'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'com.google.android.libraries.places:places:1.1.0'
+    implementation 'com.skyfishjy.ripplebackground:library:1.0.1'
+
+    // google map dependenies
+    implementation 'com.google.android.libraries.places:places:2.4.0'
+    implementation 'com.google.maps.android:android-maps-utils:2.2.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.maps:google-maps-services:0.1.20'
+    implementation 'org.slf4j:slf4j-simple:1.7.25'
+
+    implementation 'com.tbuonomo.andrui:viewpagerdotsindicator:2.0.3'
+    implementation 'com.romandanylyk:pageindicatorview:1.0.2@aar'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.github.iammert:ReadableBottomBar:0.2'
+
+    // Circular Indicator library
+    implementation 'com.victor:lib:1.0.4'
+
+    implementation 'androidx.navigation:navigation-ui:2.3.4'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+}
+
+
+apply plugin: 'com.android.application'
+
+apply plugin: 'com.google.gms.google-services'

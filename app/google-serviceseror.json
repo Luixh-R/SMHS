@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1062303949374",
+    "project_id": "smhs-bea9a",
+    "storage_bucket": "smhs-bea9a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1062303949374:android:a6b061a70b0cedec3ea76f",
+        "android_client_info": {
+          "package_name": "com.fyp.smhs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1062303949374-sffdeja706l7khg64dlsra897cl0q6ht.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": ""
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1062303949374-sffdeja706l7khg64dlsra897cl0q6ht.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

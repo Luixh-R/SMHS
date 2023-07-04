@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.fyp.smhs.Fragments.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home2" />
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.fyp.smhs.Fragments.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/nav_bmi"
+        android:name="com.fyp.smhs.Fragments.bmiFragment"
+        android:label="BMI Calculator"
+        tools:layout="@layout/fragment_bmi" />
+
+    <fragment
+        android:id="@+id/nav_help"
+        android:name="com.fyp.smhs.Fragments.HelpFragment"
+        android:label="Help/Support"
+        tools:layout="@layout/fragment_help" />
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.fyp.smhs.Fragments.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings"/>
+    <action
+        android:id="@+id/action_btnSetting_to_emailConfirmationFragment"
+        app:destination="@id/nav_settings" />
+
+
+    <fragment
+        android:id="@+id/nav_signout"
+        android:name="com.fyp.smhs.Fragments.SignOutFragment"
+        android:label="Sign Out"
+        tools:layout="@layout/fragment_sign_out" />
+    <fragment
+        android:id="@+id/nav_resources"
+        android:name="com.fyp.smhs.Navigation.ResourcesFragment"
+        android:label="Resources"
+        tools:layout="@layout/fragment_resources" />
+
+    <fragment
+        android:id="@+id/nav_statistics"
+        android:name="com.fyp.smhs.Navigation.StatisticsFragment"
+        android:label="Statistics"
+        tools:layout="@layout/fragment_statistics" />
+
+    <fragment
+        android:id="@+id/nav_settings2"
+        android:name="com.fyp.smhs.Navigation.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settingsOld" />
+
+
+    <fragment
+        android:id="@+id/nav_journal"
+        android:name="com.fyp.smhs.Navigation.JournalFragment"
+        android:label="Journal"
+        tools:layout="@layout/fragment_journal" />
+
+    <fragment
+        android:id="@+id/nav_gplocator"
+        android:name="com.fyp.smhs.Fragments.LocatorFragment"
+        android:label="GP Location"
+        tools:layout="@layout/fragment_locator" />
+
+    <fragment
+        android:id="@+id/nav_savedplaces"
+        android:name="com.fyp.smhs.Fragments.SavedPlacesFragment"
+        android:label="Saved Places"
+        tools:layout="@layout/fragment_saved_places" />
+
+</navigation>
